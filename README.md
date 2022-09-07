@@ -26,11 +26,6 @@ In addition to the above files the following Python files must be in `$PYTHONPAT
 
 For example:
 
-```zsh
-export PYTHONPATH="${PYTHONPATH}:${HOME}/git/gitlab/stuber/python_scripts"
-export PYTHONPATH="${PYTHONPATH}:${HOME}/git/gitlab/amr"
-export PYTHONPATH="${PYTHONPATH}:${HOME}/.conda/envs/tod/bin"
-```
 
 ## Run:
 
@@ -42,33 +37,4 @@ Basic usage:
 amr_wrapper.py -r1 *_R1*fastq.gz -r2 *_R2*fastq.gz
 ```
 
-## HPC:
-
-A batch file for running a single sample is here:
-
-```zsh
-${HOME}/git/gitlab/batch_scripts/amr.sh
-```
-
-options can be passed within a single pair of quotes:
-
-```zsh
-${HOME}/git/gitlab/batch_scripts/amr.sh "-a -d"
-```
-
-If multple paired FASTQ files are to be ran at the same time:
-
-```zsh
-${HOME}/git/gitlab/stuber/hpc/cluster_amr.sh
-```
-
-As with a single sample batch script, options can be passed:
-
-```zsh
-${HOME}/git/gitlab/stuber/hpc/cluster_amr.sh "-ad"
-```
-
-`cluster_amr.sh` runs one sample per node.
-
-A typical sample will run in approximately 20 minutes.
 # NAHLN_AMR
